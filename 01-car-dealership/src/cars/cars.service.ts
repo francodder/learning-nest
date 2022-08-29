@@ -11,28 +11,7 @@ export class CarsService {
 
   /* A provider is a class that can be injected as a dependency */
 
-  private cars: Car[] = [
-    {
-      id: uuid(),
-      brand: 'ford',
-      model: 'fiesta',
-    },
-    {
-      id: uuid(),
-      brand: 'ford',
-      model: 'ka',
-    },
-    {
-      id: uuid(),
-      brand: 'chevrolet',
-      model: 'cruze',
-    },
-    {
-      id: uuid(),
-      brand: 'jeep',
-      model: 'renegade',
-    },
-  ];
+  private cars: Car[] = [];
 
   findAll() {
     return [...this.cars];
@@ -72,6 +51,10 @@ export class CarsService {
     const car = this.findById(id);
     this.cars = this.cars.filter(car => car.id !== id);
     return car;
+  }
+
+  fillWithMockData(cars: Car[]) {
+    this.cars = cars;
   }
 }
 
