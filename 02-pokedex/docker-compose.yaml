@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    db:
+      image: mongo:5
+      restart: always
+      ports: 
+       - 27017:27017 # Creates a bridge between desktop and image ports
+      environment:
+       MONGODB: nest-pokemon
+      volumes:
+       - ./mongo:/data/db # link a folder with the database to make db persistent
