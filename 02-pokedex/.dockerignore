@@ -1,0 +1,5 @@
+# Estos archivos van a ser ignorados en el comando COPY
+dist/
+node_modules/
+.gitignore
+.git/
