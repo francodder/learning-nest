@@ -1,7 +1,7 @@
 # Steps to connect Postgress & TypeORM
 
 1. Downolad the posgres image from docker (v14.3)
-2. Create the docker container for the DB in **docker.compose.yml** file
+2. Create the docker container for the DB in **docker-compose.yml** file
 3. Run the DB container
 
 ```

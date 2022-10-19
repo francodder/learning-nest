@@ -5,8 +5,8 @@ services:
    image: postgres:14.3
    restart: always
    ports:
-    - "5432:5432"
-   environment:
+    - "5432:5432" # Connect ports
+   environment: # Takes vars from .env file
      POSTGRES_PASSWORD: ${DB_PASSWORD}
      POSTGRES_DB: ${DB_NAME}
    container_name: teslodb
